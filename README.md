@@ -7,19 +7,26 @@ Walmart is an American multinational retail corporation that operates a chain of
 
 # Dataset 
 
-The company collected the transactional data of customers who purchased products from the Walmart Stores during Black Friday. The dataset has the following features:
-
-- User_ID:	User ID
-- Product_ID:	Product ID
-- Gender:	Sex of User
-- Age:	Age in bins
-- Occupation:	Occupation(Masked)
-- City_Category:	Category of the City (A,B,C)
-- StayInCurrentCityYears:	Number of years stay in current city
-- Marital_Status:	Marital Status
-- ProductCategory:	Product Category (Masked)
-- Purchase:	Purchase Amount
-
+- Datetime: datetime
+- Season: season (1: spring, 2: summer, 3: fall, 4: winter)
+- Holiday: whether day is a holiday or not (extracted from http://dchr.dc.gov/page/holiday-schedule)
+workingday: if day is neither weekend nor holiday is 1, otherwise is 0.
+- Weather:
+- 1: Clear, Few clouds, partly cloudy, partly cloudy
+- 2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist
+- 3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds
+- 4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog
+- Temp: temperature in Celsius
+- Atemp: feeling temperature in Celsius
+- Humidity: humidity
+- Windspeed: wind speed
+- Casual: count of casual users
+- Registered: count of registered users
+- Count: count of total rental bikes including both casual and registered
+- 
 # Business Problem
 
-The Management team at Walmart Inc. wants to analyze the customer purchase behavior (specifically, purchase amount) against the customer’s gender and the various other factors to help the business make better decisions. They want to understand if the spending habits differ between male and female customers: Do women spend more on Black Friday than men? (Assume 50 million customers are male and 50 million are female).
+The company wants to know:
+
+- Which variables are significant in predicting the demand for shared electric cycles in the Indian market?
+- How well those variables describe the electric cycle demands
